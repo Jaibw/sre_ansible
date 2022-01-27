@@ -34,6 +34,13 @@ ansible 172.31.6.127 -m setup | less
 cd yourname
 wget -O user.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user.yaml
 
+# eg. of jai user 
+cd jai
+wget -O user.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user.yaml
+sed 's/username/jai/g' user.yaml > jai.yaml
+ansible-playbook jai.yaml
+
+
 # DEBUG PLAYBOOKS 
 cd username
 wget -O user.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user.yaml
@@ -45,8 +52,3 @@ ansible-playbook --check user.yaml
 sed 's/username/yourname/g' user.yaml > yourname.yaml
 ansible-playbook yourname.yaml
 
-# eg. of jai user 
-cd jai
-wget -O user.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user.yaml
-sed 's/username/jai/g' user.yaml > jai.yaml
-ansible-playbook jai.yaml
