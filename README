@@ -52,3 +52,8 @@ ansible-playbook --syntax-check user.yaml
 ansible-playbook --check user.yaml
 ansible-playbook --step user.yaml 
 
+# HANDLERS 
+cd yourname
+wget -O handlers-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/handlers-demo.yaml
+sed 's/username/yourname/g' handlers-demo.yaml > handlers-file.yaml
+ansible-playbook handlers-file.yaml
