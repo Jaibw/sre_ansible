@@ -19,3 +19,10 @@ ansible 172.31.6.127 -m service -a "name=chronyd state=stopped"
 ansible 172.31.6.127 -m service -a "name=chronyd state=stopped" --become
 ansible 172.31.6.127 -m service -a "name=chronyd state=started" --become
 ansible 172.31.6.127 -m file -a "path=/tmp/jai-demo state=directory mode=777" 
+
+ansible 172.31.6.127 -m shell -a "mkdir /tmp/yourname123 && ls /tmp"
+ansible 172.31.6.127 -m yum -a "name=telnet state=present" --become
+cd yourname
+echo "Hello world!" > file-yourname.text
+ansible 172.31.6.127 -m copy -a "src=/home/ubuntu/yourname/file-yourname.text dest=/tmp/file-yourname.text mode=777"
+ansible 172.31.6.127 -m shell -a "ls /tmp | grep yourname"
