@@ -91,3 +91,8 @@ wget -O ignore-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/mai
 sed 's/ignore_errors:\syes//g' ignore-demo.yaml > ignore-demo-01.yaml
 ansible-playbook ignore-demo-01.yaml
 ansible-playbook ignore-demo.yaml
+
+# CONDITIONS IN PLAYBOOK
+cd yourname 
+wget -O install-apache.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/install-apache.yaml
+ansible-playbook install-apache.yaml
