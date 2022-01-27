@@ -28,3 +28,16 @@ ansible 172.31.6.127 -m copy -a "src=/home/ubuntu/yourname/file-yourname.text de
 ansible 172.31.6.127 -m shell -a "ls /tmp | grep yourname"
 
 ansible 172.31.6.127 -m setup | less
+
+
+# ADD A USER 
+cd yourname
+wget -O user.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user.yaml
+sed 's/username/yourname/g' user.yaml > yourname.yaml
+ansible-playbook yourname.yaml
+
+# eg. of jai user 
+cd jai
+wget -O user.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user.yaml
+sed 's/username/jai/g' user.yaml > jai.yaml
+ansible-playbook jai.yaml
