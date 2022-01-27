@@ -4,7 +4,7 @@
   tasks:
   - name: Install a package  
     yum: name=telnet state=present 
-    register: install-output 
+    register: install_output 
   - name: Print Install Output 
-    debug: var=install-output
+    debug: var=install_output
   
