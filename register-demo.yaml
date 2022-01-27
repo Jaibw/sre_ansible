@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.12.133
+  become: yes
+  tasks:
+  - name: Install a package  
+    yum: name=telnet state=present 
+    register: install-output 
+  - name: Print Install Output 
+    debug: var=install-output
+  
