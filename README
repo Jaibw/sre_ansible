@@ -33,16 +33,9 @@ ansible 172.31.6.127 -m setup | less
 # ADD A USER 
 cd yourname
 wget -O user.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user.yaml
-
-# VERBOSE OUTPUT
-cd yourname 
-ansible-playbook fact-demo.yaml -v
-ansible-playbook fact-demo.yaml -vv
-ansible-playbook fact-demo.yaml -vvv
-ansible-playbook fact-demo.yaml -vvvv
-ansible-playbook fact-demo.yaml -vvvvv
 sed 's/username/yourname/g' user.yaml > yourname.yaml
 ansible-playbook yourname.yaml
+
 # eg. of jai user 
 cd jai
 wget -O user.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user.yaml
@@ -71,6 +64,16 @@ cd yourname
 wget -O user-variable.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user-variable.yaml
 ansible-playbook user-variable.yaml -e username="yourname123"
 ansible "*" -a "ls -a /home/"
+
+
+# VERBOSE OUTPUT
+cd yourname 
+ansible-playbook fact-demo.yaml -v
+ansible-playbook fact-demo.yaml -vv
+ansible-playbook fact-demo.yaml -vvv
+ansible-playbook fact-demo.yaml -vvvv
+ansible-playbook fact-demo.yaml -vvvvv
+
 
 # FACT DEMO 
 cd yourname 
