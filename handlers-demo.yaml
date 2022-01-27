@@ -9,6 +9,16 @@
       state: touch
     notify: 
     - Add content
+  - name: creating second file 
+    file: 
+      path: /tmp/username02.txt
+      mode: 777
+      state: touch
+  - name: creating last file 
+    file: 
+      path: /tmp/username03.txt
+      mode: 777
+      state: touch
   handlers:
   - name: Add content
     shell: "echo 'demo' > /tmp/username01.txt"
