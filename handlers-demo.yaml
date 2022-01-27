@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: creating one file 
+    file: 
+      path: /tmp/username01.txt
+      mode: 777
+      state: touch
+    notify: 
+    - Add content
+  handlers:
+  - name: Add content
+    shell: "echo 'demo' > /tmp/username01.txt"
