@@ -57,3 +57,9 @@ cd yourname
 wget -O handlers-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/handlers-demo.yaml
 sed 's/username/yourname/g' handlers-demo.yaml > handlers-file.yaml
 ansible-playbook handlers-file.yaml
+
+# ADD USER WITH VARIABLE 
+cd yourname
+wget -O user-variable.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user-variable.yaml
+ansible-playbook user-variable.yaml -e username="yourname123"
+ansible "*" -a "ls -a /home/"
