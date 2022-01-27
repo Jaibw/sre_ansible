@@ -1,0 +1,21 @@
+ansible 172.31.6.127 -m ping
+ansible 172.31.6.127 -a "mkdir /tmp/name"
+ansible 172.31.6.127 -a "ls /tmp/"
+ansible 172.31.6.127 -a "uname -a"
+ansible "*" --list-hosts
+ansible "*" -a "uname -a"
+ansible 172.31.6.127 -a "ls -a /home/ec2-user"
+ansible 172.31.6.127 -a "cat ~/.bashrc"
+ansible 172.31.6.127 -a "cat /etc/bashrc"
+
+
+ansible 172.31.6.127 -m ping
+ansible 172.31.6.127 -m user -a "name=name state=present"
+ansible --help
+ansible 172.31.6.127 -m user -a "name=name state=present" --become
+ansible 172.31.6.127 -m file -a "path=/tmp/jai.text mode=777 state=touch"
+ansible 172.31.6.127 -m yum -a "name=chrony state=present" --become
+ansible 172.31.6.127 -m service -a "name=chronyd state=stopped"
+ansible 172.31.6.127 -m service -a "name=chronyd state=stopped" --become
+ansible 172.31.6.127 -m service -a "name=chronyd state=started" --become
+ansible 172.31.6.127 -m file -a "path=/tmp/jai-demo state=directory mode=777" 
