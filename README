@@ -85,3 +85,9 @@ cd yourname
 wget -O register-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/register-demo.yaml
 ansible-playbook register-demo.yaml 
 
+# IGNORE ERRORS DEMO 
+cd yourname 
+wget -O ignore-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/ignore-demo.yaml
+sed 's/ignore_errors:\syes//g' ignore-demo.yaml > ignore-demo-01.yaml
+ansible-playbook ignore-demo-01.yaml
+ansible-playbook ignore-demo.yaml
