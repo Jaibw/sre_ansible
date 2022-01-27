@@ -63,3 +63,8 @@ cd yourname
 wget -O user-variable.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user-variable.yaml
 ansible-playbook user-variable.yaml -e username="yourname123"
 ansible "*" -a "ls -a /home/"
+
+# FACT DEMO 
+cd yourname 
+wget -O fact-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/fact-demo.yaml
+ansible-playbook fact-demo.yaml
