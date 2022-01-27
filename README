@@ -50,5 +50,5 @@ wget -O bad-user.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/b
 ansible-playbook --syntax-check bad-user.yaml
 ansible-playbook --syntax-check user.yaml
 ansible-playbook --check user.yaml
-
+ansible-playbook --step user.yaml 
 
