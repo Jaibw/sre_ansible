@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: "Try to run a command "
+    command: /bin/date123
+    ignore_errors: yes 
+  - name: "List files "
+    command: "ls /tmp/"
+      
