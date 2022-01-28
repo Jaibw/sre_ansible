@@ -154,3 +154,10 @@ ansible-playbook free_strategy.yaml
 cd yourname
 wget -O batchsize_demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/batchsize_demo.yaml
 ansible-playbook batchsize_demo.yaml
+
+# DEPLOY A WEBSITE 
+cd yourname
+wget -O website_deploy.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/website_deploy.yaml
+sed 's/serverip/172.31.*.*/g' website_deploy.yaml > mywebsite.yaml
+cat mywebsite.yaml
+ansible-playbook mywebsite.yaml
