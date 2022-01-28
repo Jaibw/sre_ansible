@@ -109,3 +109,9 @@ cd yourname
 wget -O users.txt https://raw.githubusercontent.com/Jaibw/sre_ansible/main/users.txt
 wget -O  loop-when-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/loop-when-demo.yaml
 ansible-playbook loop-when-demo.yaml
+
+# INSTALL PKGS IN CENTOS
+cd yourname
+wget -O pkg_install.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/pkg_install.yaml
+cat pkg_install.yaml
+ansible-playbook pkg_install.yaml
