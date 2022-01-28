@@ -10,4 +10,4 @@
     - name: print users
       command: "echo {{ item }}"
       with_lines: cat users.txt
-    when: ansible_facts['distribution'] == 'Centos'
+    when: ansible_facts['distribution'] == 'CentOS'
