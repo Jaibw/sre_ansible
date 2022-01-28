@@ -96,3 +96,10 @@ ansible-playbook ignore-demo.yaml
 cd yourname 
 wget -O install-apache.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/install-apache.yaml
 ansible-playbook install-apache.yaml
+
+# ANSIBLE LOOP 
+cd yourname
+wget -O user-loop.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user-loop.yaml
+sed 's/username/yourname/g' user-loop.yaml > usersloop.yaml
+usersloop.yaml
+ansible-playbook usersloop.yaml
