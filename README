@@ -182,3 +182,21 @@ ansible-playbook block-demo.yaml --ask-vault-pass
 ansible-vault decrypt block-demo.yaml
 cat block-demo.yaml
 ansible-playbook block-demo.yaml
+
+# ANSIBLE ROLES 
+cd yourname
+ansible-galaxy init demorole 
+cd demorole 
+tree
+echo "" >> defaults/main.yml 
+echo "user: yourname001" >> defaults/main.yml
+cat defaults/main.yml 
+echo "" >> tasks/main.yml 
+echo "- name: creating users" >> tasks/main.yml 
+echo "  user: name=\"{{ user }}\" state=present" >> tasks/main.yml 
+cat tasks/main.yml  
+cd ..
+wget -O testrole.yml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/testrole.yml
+sed 's/username/demorole/g' testrole.yml > myrole.yml
+cat myrole.yml
+ansible-playbook myrole.yml
