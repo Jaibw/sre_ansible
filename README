@@ -101,5 +101,11 @@ ansible-playbook install-apache.yaml
 cd yourname
 wget -O user-loop.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/user-loop.yaml
 sed 's/username/yourname/g' user-loop.yaml > usersloop.yaml
-usersloop.yaml
+cat usersloop.yaml
 ansible-playbook usersloop.yaml
+
+# LOOP WITH WHEN CONDITION 
+cd yourname
+wget -O users.txt https://raw.githubusercontent.com/Jaibw/sre_ansible/main/users.txt
+wget -O  loop-when-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/loop-when-demo.yaml
+ansible-playbook loop-when-demo.yaml
