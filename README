@@ -170,3 +170,15 @@ cd yourname
 wget ec2-instance.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/ec2-instance.yaml
 ansible-playbook  ec2-instance.yaml 
 
+# VAULT DEMO 
+cd yourname
+wget -O block-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/block-demo.yaml
+cat block-demo.yaml
+ansible-vault encrypt block-demo.yaml
+cat block-demo.yaml
+ansible-vault view block-demo.yaml 
+ansible-playbook block-demo.yaml 
+ansible-playbook block-demo.yaml --ask-vault-pass
+ansible-vault decrypt block-demo.yaml
+cat block-demo.yaml
+ansible-playbook block-demo.yaml
