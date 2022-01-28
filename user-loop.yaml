@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: creating users 
+    user: 
+      name: "{{ item }}"
+      state: present
+    with_items:
+    - username0001
+    - username0002
+    - username0003
+    - username0004
