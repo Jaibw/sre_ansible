@@ -5,4 +5,9 @@
   - name: Rebooting machine  
     reboot: 
       reboot_timeout: 300
+  - name: Install a pkg
+    package:
+      name: telnet 
+      state: absent
+    retries: 2
    
