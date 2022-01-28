@@ -125,3 +125,10 @@ ansible-playbook reboot.yaml
 cd yourname
 wget -O block-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/block-demo.yaml
 ansible-playbook block-demo.yaml
+
+# TAGS DEMO
+cd yourname
+wget -O tags-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/tags-demo.yaml
+ansible-playbook tags-demo.yaml --tags numbers
+ansible-playbook tags-demo.yaml --tags numbers,users
+ansible-playbook tags-demo.yaml --skip-tags numbers
