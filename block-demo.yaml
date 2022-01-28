@@ -10,4 +10,10 @@
     - name: print users
       command: "echo {{ item }}"
       with_lines: cat users.txt
+    rescue:
+    - name: Print rescue message 
+      command: "echo rescue "
+    always:
+    - name: Always print it 
+      command: "Print this message"
     when: ansible_facts['distribution'] == 'CentOS'
