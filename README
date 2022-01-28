@@ -149,3 +149,8 @@ ansible-playbook loop-when-demo.yaml -f 5
 cd yourname
 wget -O free_strategy.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/free_strategy.yaml
 ansible-playbook free_strategy.yaml
+
+# BATCH SIZE DEMO
+cd yourname
+wget -O batchsize_demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/batchsize_demo.yaml
+ansible-playbook batchsize_demo.yaml
