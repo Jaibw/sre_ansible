@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes
+  serial: 2
+  tasks:
+  - name: Install Apache2  
+    apt: 
+      name: apache2
+      update_cache: yes
+      state: present
+    when: ansible_distribution == "Ubuntu"
+  - name: Install HTTPD  
+    yum: 
+      name: httpd
+      state: present      
+    when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
