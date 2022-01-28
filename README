@@ -121,3 +121,7 @@ cd yourname
 wget -O reboot.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/reboot.yaml
 ansible-playbook reboot.yaml 
 
+# BLOCK DEMO 
+cd yourname
+wget -O block-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/block-demo.yaml
+ansible-playbook block-demo.yaml
