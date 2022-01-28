@@ -19,5 +19,5 @@
   - name: Always print it 
     command: "echo 'Print this message'"
     tags:
-    - always
+    - printalways
     
