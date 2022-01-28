@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes
+  strategy: free
+  tasks:
+  - name: Installing Pkgs  
+    yum: 
+      name: "{{ item }}"
+      state: present
+    when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
+    with_items:
+    - php
+    - gcc
+    - talk
+    - httpd
+    
