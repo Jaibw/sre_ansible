@@ -132,3 +132,10 @@ wget -O tags-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/
 ansible-playbook tags-demo.yaml --tags numbers
 ansible-playbook tags-demo.yaml --tags numbers,users
 ansible-playbook tags-demo.yaml --skip-tags numbers
+
+# NO GATHERING FACTS 
+cd yourname
+wget -O nofact-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/nofact-demo.yaml
+wget -O fact-demo.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/fact-demo.yaml
+ansible-playbook nofact-demo.yaml
+ansible-playbook fact-demo.yaml
