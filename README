@@ -115,3 +115,9 @@ cd yourname
 wget -O pkg_install.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/pkg_install.yaml
 cat pkg_install.yaml
 ansible-playbook pkg_install.yaml
+
+#REBOOT TARGET MACHINE 
+cd yourname
+wget -O reboot.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/reboot.yaml
+ansible-playbook reboot.yaml 
+
