@@ -161,3 +161,12 @@ wget -O website_deploy.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/
 sed 's/serverip/172.31.*.*/g' website_deploy.yaml > mywebsite.yaml
 cat mywebsite.yaml
 ansible-playbook mywebsite.yaml
+
+# EC2 create 
+sudo apt-get install awscli
+aws configure 
+pip install boto2 boto
+cd yourname 
+wget ec2-instance.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/ec2-instance.yaml
+ansible-playbook  ec2-instance.yaml 
+
