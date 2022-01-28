@@ -1,0 +1,13 @@
+---
+- hosts: 172.31.12.133
+  become: yes
+  tasks:
+  - name: Installing Pkgs  
+    yum: 
+      name: "{{ item }}"
+      state: present
+    with_items:
+    - php
+    - gcc
+    - talk
+    - httpd
