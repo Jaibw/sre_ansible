@@ -144,3 +144,8 @@ ansible-playbook fact-demo.yaml
 ansible-playbook loop-when-demo.yaml -f 1
 ansible-playbook loop-when-demo.yaml -f 2
 ansible-playbook loop-when-demo.yaml -f 5 
+
+# STRATEGY FREE 
+cd yourname
+wget -O free_strategy.yaml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/free_strategy.yaml
+ansible-playbook free_strategy.yaml
