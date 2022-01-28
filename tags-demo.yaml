@@ -1,0 +1,23 @@
+---
+- hosts: all
+  tasks:
+  - name: Running command 
+    command: "echo {{ item }}"
+    loop: [0,1,2,3,4,5,6,7,8,9,10]
+    when: item > 2
+    tags:
+    - numbers
+  - name: print users
+    command: "echo {{ item }}"
+    with_lines: cat users.txt
+    tags:
+    - numbers
+  - name: Print rescue message 
+    command: "echo rescue "
+    tags:
+    - rescue
+  - name: Always print it 
+    command: "echo 'Print this message'"
+    tags:
+    - always
+    
