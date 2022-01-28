@@ -200,3 +200,10 @@ wget -O testrole.yml https://raw.githubusercontent.com/Jaibw/sre_ansible/main/te
 sed 's/username/demorole/g' testrole.yml > myrole.yml
 cat myrole.yml
 ansible-playbook myrole.yml
+
+# ANSIBLE GALAXY 
+ansible-galaxy search docker 
+ansible-galaxy search derjd.docker
+ansible-galaxy install derjd.docker
+ls /home/ubuntu/.ansible/roles/derjd.docker
+tree /home/ubuntu/.ansible/roles/derjd.docker
