@@ -1,15 +1,12 @@
 ---
-- hosts: all
+- hosts: serverip
   vars:
     - htmldir: /var/www/html
     - gitrepo: https://github.com/Jaibw/FrozenYogurtShop.git
   tasks:
-    - name: remove apache2
-      become: yes
-      apt: name=apache2 state=absent
     - name: install nginx
       become: yes
-      apt: name=nginx state=latest
+      apt: name=nginx state=latest update_cache=yes
     - name: start nginx service
       service:
         name: nginx
