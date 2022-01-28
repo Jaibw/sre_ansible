@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: no
+  tasks:
+  - name: "Ansible Fact Hostname : {{ ansible_hostname }}"
+    debug: 
+      msg: "{{ ansible_hostname }}"
+  - name: "Ansible Fact OS : {{ ansible_distribution }}"
+    debug: 
+      msg: "{{ ansible_distribution }} - {{ ansible_eth0.ipv4.address }}"
+      
